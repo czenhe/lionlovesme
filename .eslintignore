@@ -1,0 +1,20 @@
+.DS_Store
+*.log*
+node_modules
+
+.nuxt
+.nitro
+.cache
+.output
+.env
+.env.*
+!.env.example
+*.d.ts
+
+dist
+/build
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
+package-lock.json
+yarn.lock

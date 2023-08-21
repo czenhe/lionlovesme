@@ -1,16 +1,40 @@
 {
-  "name": "nuxt-app",
+  "name": "lion-loves-me",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:precommit": "eslint 'src/**/*.{ts,tsx}' --fix --max-warnings 0",
+    "fmt:precommit": "prettier -l './**/*.{js,jsx,ts,tsx,json,css,scss}'"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5"
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "nuxt": "^3.6.5",
+    "prettier": "3.0.2"
+  },
+  "volta": {
+    "node": "18.17.1",
+    "npm": "9.6.7"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,vue} !(*.generated.ts)": [
+      "npm run lint:precommit",
+      "nx format:write"
+    ],
+    "src/**/*.{js,ts,vue,json,css,scss}": "npm run fmt:precommit"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
