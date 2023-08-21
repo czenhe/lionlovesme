@@ -15,13 +15,15 @@
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^18.17.3",
     "@vue/eslint-config-prettier": "^8.0.0",
+    "destyle.css": "^4.0.0",
     "eslint": "^8.47.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.17.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "nuxt": "^3.6.5",
-    "prettier": "3.0.2"
+    "prettier": "3.0.2",
+    "sass": "^1.66.1"
   },
   "volta": {
     "node": "18.17.1",
