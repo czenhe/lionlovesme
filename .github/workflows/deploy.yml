@@ -29,6 +29,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.SSH_ACCOUNT }}
           password: ${{ secrets.SSH_KEY }}
-          local-dir: ./dist/
+          local-dir: ./.output/public/
           server-dir: ${{ secrets.SERVER_PATH }}/
           protocol: ftps
